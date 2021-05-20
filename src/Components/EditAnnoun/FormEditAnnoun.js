@@ -72,7 +72,7 @@ function FormEditAnnoun  ( props ) {
                     required
                 />
                 <br/>
-                <button className='btn-success mt-3' type='submit'>Add</button>
+                <button className='btn-success mt-3' type='submit'>Edit</button>
                 <button onClick={()=>history.push('/')} className='btn-danger ml-3'>Cancel</button>
             </form>
         </div>
