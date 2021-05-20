@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from "react-router-dom";
+import List from "./Components/All/List";
+import {GlobalProvider} from "./Contex/GlobalState";
+import FormEditAnnoun from "./Components/EditAnnoun/FormEditAnnoun";
+import FormAddAnnoun from "./Components/AddBook/FormAddAnnoun";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <GlobalProvider>
+      <Router>
+          <Switch>
+            <Route exact path='/' component={List}/>
+            <Route exact path='/add' component={FormAddAnnoun}/>
+            <Route exact path='/edit/:id' component={FormEditAnnoun}/>
+          </Switch>
+      </Router>
+      </GlobalProvider>
   );
 }
 
