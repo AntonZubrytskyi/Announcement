@@ -21,12 +21,21 @@ function FormEditAnnoun  ( props ) {
 
     const currentId = props.match.params.id;
 
- useEffect(()=>{
-     const announId = currentId
-     const selectedAnnoun = announs.find(announ => announ.id === announId)
-     setSelected(selectedAnnoun)
+ // useEffect(()=>{
+ //     const announId = currentId
+ //     const selectedAnnoun = announs.find(announ => announ.id === announId)
+ //     setSelected(selectedAnnoun)
+ //
+ // },[currentId , announs])
 
- },[currentId , announs])
+
+        const announId = currentId
+        const selectedAnnoun = announs.find(announ => announ.id === announId)
+        setSelected(selectedAnnoun)
+
+
+
+
 
 
  const onSubmit = (e)=>{
