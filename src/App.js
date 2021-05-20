@@ -13,13 +13,11 @@ function App() {
 
   return (
       <GlobalProvider>
-      <Router>
           <Switch>
             <Route exact path='/' component={List}/>
             <Route exact path='/add' component={FormAddAnnoun}/>
             <Route exact path='/edit/:id' component={FormEditAnnoun}/>
           </Switch>
-      </Router>
       </GlobalProvider>
   );
 }
